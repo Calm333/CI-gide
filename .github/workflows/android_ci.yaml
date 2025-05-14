@@ -5,10 +5,14 @@ on:
     branches:
       - dev
       - feature/*
+    tags:
+      - 'v*'
   pull_request:
     branches:
       - dev
       - master
+    tags:
+      - 'v*'
 
 jobs:
   build:
