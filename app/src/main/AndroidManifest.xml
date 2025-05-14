@@ -13,6 +13,9 @@
         android:theme="@style/Theme.CIGide"
         tools:targetApi="31">
         <activity
+            android:name=".ShowDataActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
