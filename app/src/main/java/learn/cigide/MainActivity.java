@@ -1,6 +1,9 @@
 package learn.cigide;
 
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,5 +17,21 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        TextView tv = findViewById(R.id.teiew);
+        EditText et = findViewById(R.id.editTextText);
+        Button bt = findViewById(R.id.button);
+
+        bt.setOnClickListener(view -> {
+            String val = et.getText().toString();
+
+            tv.setText(val);
+        });
+
+        int res = multipliedNumber(523);
+        System.out.println(res);
+    }
+
+    private int multipliedNumber(int val) {
+        return val * 2;
     }
 }
